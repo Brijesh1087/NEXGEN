@@ -1,0 +1,24 @@
+nav{
+	background-color: #DA3C78;
+}
+.font-playfair{
+	font-family: 'Playfair Display', serif;
+}
+.font-pacifico{
+	font-family: 'Pacifico', cursive;
+}
+.font-kavoon{
+	font-family: 'Kavoon', cursive;
+}
+.navbar-brand{
+	font-size: 35px!important;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
+.color_rgb_output{
+}
+
+.color_rgb_output div, .colors{
+	font-size: 14px;
+	word-wrap: break-word;
+}
