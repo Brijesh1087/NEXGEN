@@ -64,7 +64,6 @@ let color_rgb = () => {
 	let uniqueColor = [...new Set(colors.reverse())];
 	for(let x in uniqueColor){
 		let color = document.createElement("div");
-		// color.setAttribute('data-rgb',``)
 		color.innerHTML = `<div class='py-3' data-rgb="rgb(${uniqueColor[x]})">rgb(${uniqueColor[x]}) <ion-icon name="copy-outline"></ion-icon></div>`
 		color.style.backgroundColor=`rgb(${uniqueColor[x]})`
 		color.className = 'col-4 mx-auto p-2 col-md-3 col-lg-2  shadow colors'
