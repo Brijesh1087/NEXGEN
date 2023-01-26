@@ -53,3 +53,12 @@ nav{
 	border-radius: 50%;
 	background-color: #f0fcf5 ;
 }
+@media only screen and (max-width:600px){
+	.spinner .loader{
+		width: 80px;
+		height: 80px;
+	} 
+	.spinner .loader div{
+		width: 70px;
+		height: 70px;
+}

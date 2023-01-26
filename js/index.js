@@ -75,12 +75,15 @@ let color_rgb = () => {
 	console.log(document.querySelector('.copy-outline').onloadend = () => 'js' )
 }
 
-if(location.href.includes('rgb')){
-	color_rgb()
-}else{
-	random_color()
-}
+let wait = Math.floor(Math.random()*10)
+setTimeout(()=> {
+	if(location.href.includes('rgb')){
+		color_rgb()
+	}else{
+		random_color()
+	}
 
-window.onload = () => {
+	window.onload = () => {
 		spinner.style.display = 'none'
-}
+	}
+},wait)
