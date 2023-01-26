@@ -1,6 +1,6 @@
 let colors = document.querySelector(".colors-header");
 let color_rgb_output = document.querySelector(".color_rgb_output");
-let shades = document.querySelector(".shade");
+let spinner = document.querySelector(".spinner");
 
 let copy_color = () => {
 	let color = document.querySelectorAll(".colors");
@@ -41,6 +41,7 @@ let random_color = () => {
 		colors.appendChild(color)
 	}
 	copy_color()
+
 }
 
 let color_rgb = () => {
@@ -62,18 +63,24 @@ let color_rgb = () => {
 		}
 	}
 	let uniqueColor = [...new Set(colors.reverse())];
+	let color
 	for(let x in uniqueColor){
-		let color = document.createElement("div");
-		color.innerHTML = `<div class='py-3' data-rgb="rgb(${uniqueColor[x]})">rgb(${uniqueColor[x]}) <ion-icon name="copy-outline"></ion-icon></div>`
+		color = document.createElement("div");
+		color.innerHTML = `<div class='py-3' data-rgb="rgb(${uniqueColor[x]})">rgb(${uniqueColor[x]}) <ion-icon name="copy-outline" class='copy-outline'></ion-icon></div>`
 		color.style.backgroundColor=`rgb(${uniqueColor[x]})`
 		color.className = 'col-4 mx-auto p-2 col-md-3 col-lg-2  shadow colors'
 		color_rgb_output.appendChild(color)
 	}
 	copy_color()
+	console.log(document.querySelector('.copy-outline').onloadend = () => 'js' )
 }
 
 if(location.href.includes('rgb')){
 	color_rgb()
 }else{
 	random_color()
+}
+
+window.onload = () => {
+		spinner.style.display = 'none'
 }

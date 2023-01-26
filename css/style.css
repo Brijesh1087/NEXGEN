@@ -1,6 +1,7 @@
 nav{
 	background-color: #DA3C78;
 }
+
 .font-playfair{
 	font-family: 'Playfair Display', serif;
 }
@@ -21,4 +22,34 @@ nav{
 .color_rgb_output div, .colors{
 	font-size: 14px;
 	word-wrap: break-word;
+}
+.spinner{
+	min-height: 400px;
+	height: 100vh;
+	width: 100%;
+	background-color: #f0fcf5 ;
+	position: fixed;
+	display: grid;
+	place-items: center;
+}
+.spinner .loader{
+	display: grid;
+	place-items: center;
+	width: 100px;
+	height: 100px;
+	background-image: conic-gradient( #DA3C78  300deg, white 40deg);
+/*	padding: 5p*/
+	border-radius: 50%;
+	animation:  spinner 1s linear infinite;
+}
+@keyframes spinner{
+	to{
+		transform: rotate(360deg);
+	}
+}
+.spinner .loader div{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	background-color: #f0fcf5 ;
 }
